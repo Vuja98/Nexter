@@ -11,10 +11,17 @@
   padding-top: 4rem;
 
   display: grid;
-  grid-template-rows: 1fr min-content 6rem 1fr;
-  grid-template-columns: max-content;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 1.5rem;
   justify-content: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1;
+  }
+  @media only screen and (max-width: $bp-small) {
+    padding: 5rem;
+  }
 
   &__logo {
     height: 3rem;
@@ -33,6 +40,7 @@
     color: $color-grey-light-2;
     grid-template-columns: 1fr max-content 1fr;
     grid-column-gap: 1.5rem;
+    justify-items: center;
     align-items: center;
     &::before,
     &::after {
@@ -45,11 +53,13 @@
   }
 
   &__seenon-logos {
-    display: flex;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 3rem;
     justify-items: center;
     img {
-      height: 2.5rem;
+      max-height: 2.5rem;
+      max-width: 100%;
       filter: brightness(0.7);
     }
   }
