@@ -15,9 +15,21 @@
     <title>nexter &mdash; your home, your freedom</title>
   </head>
   <body class="container">
-    <div class="sidebar">Sidebar</div>
+    <div class="sidebar"><button class="nav-btn nav-btn--active"></button></div>
 
-    <header class="header">Header</header>
+    <header class="header">
+      <img src="img/logo.png" alt="Nexter logo" class="header__logo" />
+      <h3 class="heading-3">Your own home:</h3>
+      <h1 class="heading-1">The ultimate personal freedom</h1>
+      <button class="btn header__btn">View our properties</button>
+      <div class="header__seenon-text">As seen on</div>
+      <div class="header__seenon-logos">
+        <img src="img/logo-bbc.png" alt="Seen on logo 1" />
+        <img src="img/logo-forbes.png" alt="Seen on logo 2" />
+        <img src="img/logo-techcrunch.png" alt="Seen on logo 3" />
+        <img src="img/logo-bi.png" alt="Seen on logo 4" />
+      </div>
+    </header>
 
     <div class="realtors">Top 3 realtors</div>
     <section class="features">
@@ -343,6 +355,37 @@
         <img src="img/gal-14.jpeg" alt="Gallery img 14" class="gallery__img" />
       </figure>
     </section>
-    <footer class="footer">Footer</footer>
+    <footer class="footer">
+      <ul class="nav">
+        <li class="nav__item">
+          <a href="" class="nav__link">Find your dream home</a>
+        </li>
+        <li class="nav__item">
+          <a href="" class="nav__link">Request proposal</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="" class="nav__link">Download home planner</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="" class="nav__link">Contact us</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="" class="nav__link">Submit your property</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="" class="nav__link">Come work with us</a>
+        </li>
+      </ul>
+      <p class="copyright">&copy;</p>
+    </footer>
+    <script>
+      let copy = document.querySelector(".copyright");
+      const getYear = new Date().getFullYear();
+      copy.innerText += ` Copyright ${getYear} by Nexter. All rights reserved`;
+    </script>
   </body>
 </html>
