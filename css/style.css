@@ -93,12 +93,48 @@ body {
   grid-row: 1/-1;
   display: flex;
   justify-content: center; }
+  .sidebar ul {
+    position: fixed;
+    margin-top: 2rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem; }
+    .sidebar ul li {
+      cursor: pointer;
+      color: #fff;
+      font-size: 2rem;
+      transition: all 0.3s ease; }
+      .sidebar ul li:hover {
+        transform: scale(1.15); }
+      .sidebar ul li i {
+        width: 100%;
+        text-align: center;
+        z-index: 1; }
+      .sidebar ul li a {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        font-size: 1.6rem;
+        text-align: center;
+        color: inherit;
+        z-index: 2; }
   @media only screen and (max-width: 62.5em) {
     .sidebar {
       grid-column: 1 / -1;
       grid-row: 1 / 2;
-      justify-content: flex-end;
-      align-items: center; } }
+      justify-content: center;
+      align-items: center; }
+      .sidebar ul {
+        margin-top: 0;
+        position: relative;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 0; } }
 
 .nav-btn {
   border: none;

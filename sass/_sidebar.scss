@@ -5,11 +5,54 @@
   display: flex;
   justify-content: center;
 
+  ul {
+    position: fixed;
+    margin-top: 2rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    li {
+      cursor: pointer;
+      color: #fff;
+      font-size: 2rem;
+      transition: all 0.3s ease;
+      &:hover {
+        transform: scale(1.15);
+      }
+      i {
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+      }
+      a {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        font-size: 1.6rem;
+        text-align: center;
+        color: inherit;
+        z-index: 2;
+      }
+    }
+  }
   @media only screen and (max-width: $bp-large) {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
+
+    ul {
+      margin-top: 0;
+      position: relative;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 0;
+    }
   }
 }
 

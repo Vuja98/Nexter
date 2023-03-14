@@ -9,15 +9,46 @@
       href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-
+    <script defer src="js/script.js"></script>
     <title>nexter &mdash; your home, your freedom</title>
   </head>
   <body class="container">
-    <div class="sidebar"><button class="nav-btn nav-btn--active"></button></div>
+    <div class="sidebar">
+      <ul class="nav-links">
+        <li class="nav-item">
+          <a class="nav-link" href="#header"
+            ><i class="fas fa-arrow-up"></i>Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#features"
+            ><i class="fas fa-tags"></i>Features</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#story"><i class="fas fa-book"></i>Story</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#homes"><i class="fas fa-home"></i>Homes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#gallery"
+            ><i class="fas fa-camera-retro"></i> Gallery</a
+          >
+        </li>
+      </ul>
+    </div>
 
-    <header class="header">
+    <header class="header" id="header">
       <img src="img/logo.png" alt="Nexter logo" class="header__logo" />
       <h3 class="heading-3">Your own home:</h3>
       <h1 class="heading-1">The ultimate personal freedom</h1>
@@ -51,7 +82,7 @@
         </div>
       </div>
     </div>
-    <section class="features">
+    <section class="features" id="features">
       <div class="feature">
         <svg class="feature__icon">
           <use xlink:href="img/sprite.svg#icon-global"></use>
@@ -113,7 +144,7 @@
         </p>
       </div>
     </section>
-    <div class="story__pictures">
+    <div class="story__pictures" id="story">
       <img
         src="img/story-1.jpeg"
         alt="Couple with new house"
@@ -133,7 +164,7 @@
       </p>
       <button class="btn">Find your own home</button>
     </div>
-    <section class="homes">
+    <section class="homes" id="homes">
       <div class="home">
         <img src="img/house-1.jpeg" alt="House 1" class="home__img" />
         <svg class="home__like">
@@ -327,7 +358,7 @@
         <button class="btn home__btn home__btn">Contact realtor</button>
       </div>
     </section>
-    <section class="gallery">
+    <section class="gallery" id="gallery">
       <figure class="gallery__item gallery__item--1">
         <img src="img/gal-1.jpeg" alt="Gallery img 1" class="gallery__img" />
       </figure>
@@ -401,10 +432,5 @@
       </ul>
       <p class="copyright">&copy;</p>
     </footer>
-    <script>
-      let copy = document.querySelector(".copyright");
-      const getYear = new Date().getFullYear();
-      copy.innerText += ` Copyright ${getYear} by Nexter. All rights reserved`;
-    </script>
   </body>
 </html>
